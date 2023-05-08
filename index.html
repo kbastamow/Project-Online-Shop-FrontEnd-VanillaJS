@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body class="bg bg-black text-bg-dark">
+    <header>
+        <h1>e-MUSIC</h1>
+        <!-- <img src="./assets/guitar.jpg" alt="Guitar"> -->
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-column flex-md-row">
+            
+                <div class="btn-group  navbar-nav">
+                    <button class="btn btn-primary rounded-5 mx-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    <button id="product-btn" type="button" class="btn btn-primary-outline text-bg-dark shadow-none">See all
+                        products</button>
+                
+                        <div class="dropdown">
+                            <button id="instruments" type="button"
+                                class="btn btn-primary-outline text-bg-dark dropdown-toggle shadow-none"
+                                data-bs-toggle="dropdown" aria-expanded="false">Instruments</button>
+                            <ul class="dropdown-menu" aria-labelledby="instruments">
+                                <li><button class="dropdown-item" type="button" value="Guitars">Guitars</button></li>
+                                <li><button class="dropdown-item" type="button" value="Wind instruments">Wind instruments</button></li>
+                                <li><button class="dropdown-item" type="button" value="String instruments">String instruments</button></li>
+                                <li><button class="dropdown-item" type="button" value="Keys">Keys</button></li>
+                                <li><button class="dropdown-item" type="button" value="Instruments">All instruments</button></li>
+                            </ul>
+                        </div>
+                        <button id="accessories" type="button" class="btn btn-primary-outline text-bg-dark">Accessories</button>
+                        <button id="music" type="button" class="btn btn-primary-outline text-bg-dark">Sheet music</button>
+                    </div>
+                
+                <form id="search" class="d-flex">
+                    <input id="search-text" class="form-control form-control-sm me-2" type="text" placeholder="Search products">
+                    <input id="search-btn" class="btn btn-primary btn-sm me-3" type="submit" value="Search"></input>
+                </form>
+            </div>
+    
+ 
+    </nav>
+
+    <!-- main view -->
+
+    <main class="container">
+        <div id="products" class="row bg bg-black">  
+            
+            
+
+            <!-- EXAMPLE CARDS - no server call -->
+            <div class="card bg-dark border-3 border-white mx-auto mx-md-3 my-3 col-7 col-md-2 text-center rounded-0">
+                <h4 class="card-title mw-100 pb-3 bg-dark text-bg-dark p-2">Electric guitar</h4>
+                <div class="image-zoom w-100 bg-white">
+                  <img src="./assets/guitarproduct.jpg"
+                  class="img-fluid"/>
+                </div>
+                <div class="card-body">
+                  <h5 class="mb-3">$61.99</h5>
+                   
+                    <p id="show-details" class="mt-2" data-bs-toggle="collapse" data-bs-target="#details">Show Details</p>
+                    <p id="details" class="collapse">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque asperiores alias nobis similique ipsum, veniam ullam. Expedita laborum non velit nam illo nobis quibusdam quia, natus ratione sapiente illum cupiditate?</p>
+                    <p class="mb-0">Rating:</p>
+                    <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                    <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                    <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                    <i class="fa-solid fa-star" style="color:#e33517;"></i>
+                    <i class="fa-solid fa-star" style="color: #e33517;"></i>
+
+                    <p class="read-more mt-2" data-bs-toggle="collapse" data-bs-target="#review-example">Read more</p>
+                  
+                    <button id="buy-btn" class="btn btn-outline-light">Add to cart</button> 
+                    <div id="review-example" class="collapse text-center text-bg-dark mt-2 pt-1">
+                        <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                         <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                         <i class="fa-solid fa-star" style="color: #ffff00;"></i>
+                         <i class="fa-regular fa-star-half-stroke" style="color: #ffff00;"></i>
+                         <i class="fa-regular fa-star" style="color: #ffff00;"></i>
+                         <p>A really good quality for a reasonable price</p>
+                         <hr>
+                    </div>
+                    
+                </div>
+              </div>
+
+              <div class="card bg-dark border-3 border-white mx-auto mx-md-3 my-3 col-7 col-md-2 text-center rounded-0">
+                <h4 class="card-title mw-100  bg-black text-bg-dark p-2 mb-0">Electric guitar</h4>
+                <div class="image-zoom w-100 bg-white">
+                  <img src="./assets/guitarproduct.jpg"
+                  class="w-75"/>
+                </div>
+                <div class="card-body  bg-white text-bg-light">
+                  <h5 class="mb-3">$61.99</h5>
+        
+                  <p class="mb-0">Rating:</p>
+                  <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                  <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                  <i class="fa-solid fa-star" style="color: #e33517;"></i>
+                  <i class="fa-regular fa-star-half-stroke" style="color: #e33517;"></i>
+                  <i class="fa-regular fa-star" style="color: #e33517;"></i>
+
+                      </div>
+                    <button id="buy-btn" class="btn btn-dark rounded-0 border-0">Add to cart</button>            
+                </div>
+
+
+                <div class="card bg-dark border-3 border-white mx-auto mx-md-3 my-3 col-7 col-md-2 text-center rounded-0">
+                    <h4 class="card-title mb-3 bg-black text-bg-dark p-2">Electric guitar</h4>
+                    <div class="image-zoom">
+                      <img src="./assets/guitarproduct.jpg"
+                        class="w-100" />
+                    </div>
+                    <div class="card-body"></div>              
+                    
+                      <h5 class="mb-3">$61.99</h5>
+                        <p>Stars</p>
+                        <button id="buy-btn" class="btn btn-dark">Add to cart</button>            
+                    </div>
+
+                    <!-- End exampke cards -->
+
+                  </div>
+
+    </main>
+    
+      
+    
+    <footer class="bg-black text-bg-dark">
+        <div class="text-center pt-3 small">2023<br> All rights reserved</div>
+
+    </footer>
+
+ <!-- Offcanvas Sidebar -->
+ <div class="offcanvas offcanvas-start w-auto" id="offcanvas">
+    <div class="offcanvas-body bg-dark-subtle text-bg-light">
+        <div class="d-flex justify-content-end me-0">
+            <button type="button" class="btn-close mb-2" data-bs-dismiss="offcanvas"></button>
+        </div>
+       
+        <div id="form-display" class="p pe-5">
+
+            <!-- Login form -->
+            <form id="login-form">
+                <h5 class="text-center">Login to your account</h5>
+                <div id="login-alert"></div>
+
+
+                <div class="form-outline mb-2">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" class="form-control form-control-sm" />
+                </div>
+
+                <div class="form-outline mb-2">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" class="form-control form-control-sm" />
+                </div>
+
+                <div class="text-center pt-1 mb-4 pb-1">
+                    <input id="login-btn" class="btn btn-dark px-5" type="submit" value="Login" disabled></input>
+                </div>
+
+            </form>
+            <hr>
+
+
+            <h5 class="text-center">Don't have an account?</h5>
+            <div class="text-center pt-1 mt-3 pb-1">
+                <button id="reveal-form-btn" type="button" class="btn btn-outline-danger px-4">Create new</button>
+                <div id="signup-alert"></div>
+            </div>
+
+            <form id="signup-form" datahide="hidden">
+                <label class="form-label" for="sign-up-name">Name</label>
+                <input type="text" id="name" class="form-control form-control-sm" />
+                <label class="form-label" for="sign-up-surname">Surname</label>
+                <input type="text" id="surname" class="form-control form-control-sm" />
+                <label class="form-label" for="sign-up-email">Email</label>
+                <input type="email" id="signup-email" class="form-control form-control-sm" />
+                <label class="form-label" for="password-one">Password</label>
+                <input type="password" id="password-one" class="form-control form-control-sm" />
+                <label class="form-label" for="password-two">Repeat password </label>
+                <input type="password" id="password-two" class="form-control form-control-sm" />
+
+                <div class="text-center pt-1 mt-1 mb-4 pb-1">
+                    <input id="signup-btn" class="btn btn-primary px-5" type="submit" value="Sign up" disabled></input>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- User info basics -->
+        <div id="user-info" class="text-center" datahide="hidden">
+            <h4 class="px-3"></h4><hr>
+            <h5> Your cart </h5>
+            <i class="fa-solid fa-cart-shopping text-center" style="color: #000000;"></i>
+            <p></p>
+            <div id="cart-div" class="small">
+
+            </div>
+
+            <button id="logout-btn" class="btn btn-dark btn-sm mt-4">Logout</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
